@@ -1,0 +1,19 @@
+html, body {
+	width: 300px;
+}
+
+.hidden {
+	display: none;
+}
+
+.button {
+	text-align: center;
+	font-size: 1.5em;
+	cursor: pointer;
+	color: #66FF66;
+}
+
+.data {
+  background-color: #040704;
+}
+

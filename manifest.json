@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "get_data",
+  "version": "1.0",
+
+  "description": "get content-length data from http response headers and display to user",
+  "icons": {
+    "48": "icons/electric.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "webRequest",
+    "<all_urls>"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/electric.png",
+    "default_popup": "popup/popup.html"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  
+  "web_accessible_resources" : [
+    "click/hello_world.html"
+  ]
+}
