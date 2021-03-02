@@ -1,15 +1,28 @@
 var window;
+var gettingPage = browser.runtime.getBackgroundPage();
+gettingPage.then(onGot, onError);
 
 document.addEventListener("click", function(e) {
-  console.log("You have currently consumed " +sum+" bytes of data.");
   window = window.open("display_page.html", "display_page");
 });
 
+function convert_to_gb(num) {
+  return num/1073741824
+}
+
+function convert_to_kwh(num) {
+  return num*1.46
+}
+
+function convert_to_coal(num) {
+  return num*.8
+}
+
 function onGot(page) {
   sum = page.getSum();
-  sum_gb = sum/1073741824;
+  sum_gb = convert_to_gb(sum);
   sum_rounded = Math.round(sum_gb *10)/10;
-  kwh = sum_rounded*1.46;
+  kwh = convert_to_kwh(sum_rounded)
   coal = kwh*.8;
   coal_rounded = Math.round(coal*10/10);
   document.getElementById('output').innerHTML = sum_rounded;
@@ -21,7 +34,10 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var getting = browser.runtime.getBackgroundPage();
-getting.then(onGot, onError);
+
+
+
+
+
 
 

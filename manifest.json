@@ -21,10 +21,5 @@
 
   "background": {
     "scripts": ["background.js"]
-  },
-
-  
-  "web_accessible_resources" : [
-    "click/hello_world.html"
-  ]
+  }
 }
