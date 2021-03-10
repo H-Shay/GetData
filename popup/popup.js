@@ -23,14 +23,11 @@ function convert_to_coal(num) {
 function onGot(page) {
   sum = page.getSum();
   sum_gb = convert_to_gb(sum);
-  sum_rounded = sum_gb.toFixed(2);
   kwh = convert_to_kwh(sum_gb);
-  kwh_rounded = kwh.toFixed(2);
   coal = kwh*.8;
-  coal_rounded = coal.toFixed(2);
-  document.getElementById('output').innerHTML = sum_rounded;
-  document.getElementById('output2').innerHTML = kwh_rounded;
-  document.getElementById('output3').innerHTML = coal_rounded;
+  document.getElementById('output').innerHTML = sum_gb.toFixed(2);
+  document.getElementById('output2').innerHTML = kwh.toFixed(2);
+  document.getElementById('output3').innerHTML = coal.toFixed(2);
   document.getElementById('body').background = background_image_URL;
 }
 

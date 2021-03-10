@@ -10,7 +10,7 @@ function getContentLength(responseDetails) {
 }
 
 function getSum() {
-	return sum;
+  return sum;
 }
 
 browser.webRequest.onResponseStarted.addListener(
