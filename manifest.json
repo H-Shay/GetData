@@ -20,6 +20,10 @@
   },
 
   "background": {
-    "scripts": ["background.js"]
-  }
+    "scripts": ["track_data.js"]
+  },
+
+  "web_accessible_resources": [
+    "images/coal.JPG"
+  ]
 }

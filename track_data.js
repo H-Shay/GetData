@@ -11,7 +11,6 @@ function getContentLength(responseDetails) {
 
 function getSum() {
 	return sum;
-  console.log("got sum")
 }
 
 browser.webRequest.onResponseStarted.addListener(
