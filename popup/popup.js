@@ -12,19 +12,19 @@ function convert_to_gb(num) {
   return num/1073741824
 }
 
-function convert_to_kwh(num) {
+function gb_to_kwh(num) {
   return num*1.46
 }
 
-function convert_to_coal(num) {
-  return num*.8
+function kwh_to_coal(num) {
+  return num*.9
 }
 
 function onGot(page) {
   sum = page.getSum();
   sum_gb = convert_to_gb(sum);
-  kwh = convert_to_kwh(sum_gb);
-  coal = kwh*.8;
+  kwh = gb_to_kwh(sum_gb);
+  coal = kwh_to_coal(kwh)*.3
   document.getElementById('output').innerHTML = sum_gb.toFixed(2);
   document.getElementById('output2').innerHTML = kwh.toFixed(2);
   document.getElementById('output3').innerHTML = coal.toFixed(2);
