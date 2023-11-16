@@ -1,5 +1,5 @@
 # GetData
-This is a browser add-on written to help end-users reason about and quantify the enviromental impacts of their brrowsing habits. It was written specifically for 
+This is a browser add-on written to help end-users reason about and quantify the enviromental impacts of their browsing habits. It was written specifically for 
 Firefox web browsers. 
 
 This program is currently unreleased but if you want to try the alpha version, download the code and then point firefox to the about:debugging page. From there, 
